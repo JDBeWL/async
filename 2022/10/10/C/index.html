@@ -63,20 +63,16 @@
 
 
 <!-- Variable -->
-<script>window.ASYNC_CONFIG = {"hostname":"jdbewl.github.io","author":"JDBeWL","root":"/async/","typed_text":["一些好玩的东西"],"favicon":{"logo":"/img/favicon.ico","icon16":"/img/favicon.ico","icon32":"/img/favicon.ico","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"theme_version":"1.1.1","theme":{"switch":true,"default":"auto"},"search":{"enable":false,"type":"engine","href":"https://www.google.com/search?q=site:","domain":null},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。"},"creative_commons":{"license":"by-nc-sa","language":"deed.zh","post":false,"clipboard":false},"swup":true};</script>
+<script>window.ASYNC_CONFIG = {"hostname":"jdbewl.github.io","author":"JDBeWL","root":"/async/","typed_text":["一些好玩的东西"],"favicon":{"logo":"/img/favicon.ico","icon16":"/img/favicon.ico","icon32":"/img/favicon.ico","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"theme_version":"1.1.1","theme":{"switch":true,"default":"style-light"},"search":{"enable":false,"type":"engine","href":"https://www.google.com/search?q=site:","domain":null},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。"},"creative_commons":{"license":"by-nc-sa","language":"deed.zh","post":false,"clipboard":false},"swup":true};</script>
 
 <!-- Theme mode css -->
-
-    <link data-swup-theme="style-light" rel="stylesheet" href="/async/css/style-light.css?v=1.1.1" id="trm-switch-style">
-    <link data-swup-theme="style-dark" rel="stylesheet" href="/async/css/style-dark.css?v=1.1.1" id="trm-switch-style">
-    <script>
-        let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
-        let catchMode = localStorage.getItem('theme-mode') || defaultMode;
-        let themeMode = catchMode === 'style-dark' ? 'style-light' : 'style-dark';
-        let linkdom = document.querySelector('[data-swup-theme='+themeMode+']');
-        if(linkdom) linkdom.remove();
-    </script>
-
+<link data-swup-theme rel="stylesheet" href="/async/css/index.css?v=1.1.1" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
 
 <!-- CDN -->
 
@@ -214,7 +210,7 @@
     <div class="trm-banner" data-scroll data-scroll-direction="vertical">
     
     <!-- banner cover -->
-    <img src="/async/img/banner.png" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3">
+    <img style="object-position:top;object-fit:cover;" src="/async/img/banner.png" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3">
     <!-- banner cover end -->
     
 
@@ -270,7 +266,9 @@
             
                 <div class="col-lg-4 hidden-sm">
                     <!-- main card -->
-                    <div class="trm-main-card-frame trm-sidebar">
+                    
+
+<div class="trm-main-card-frame trm-sidebar">
     <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
     
         <div class="trm-tabs" id="sidebar-tabs">
@@ -281,7 +279,7 @@
             <div name="tabs-user" class="trm-tabs-item">
                 <!-- card header -->
 <div class="trm-mc-header">
-    <div class="trm-avatar-frame trm-mb-20"><img class="trm-avatar" src="/async/img/avatar.png" alt="Avatar"> </div>
+    <div class="trm-avatar-frame trm-mb-20"><img class="trm-avatar" src="/async/img/avatar.jpg" alt="Avatar"> </div>
     <h5 class="trm-name trm-mb-15">
         jdbEwl的小站
     </h5>
@@ -301,7 +299,7 @@
 
 <div class="trm-social">
     
-        <a href="https://github.com/JDBeWL" title="Github" rel="nofollow" target="_blank">
+        <a href="https://github.com" title="Github" rel="nofollow" target="_blank">
             <i class="fab fa-github"></i>
         </a>
     
@@ -331,7 +329,7 @@
                 City:
             </div>
             <div class="trm-label trm-label-light">
-                Random
+                WuHan
             </div>
         </li>
     
@@ -349,7 +347,7 @@
             </div>
             <div name="tabs-toc" class="trm-tabs-item active">
                 <div class="post-toc">
-    <ol class="toc"><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#简单的长方形周长及面积计算" data-scroll-to="#简单的长方形周长及面积计算"><span class="toc-tips">简单的长方形周长及面积计算</span></a></li><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#支持输入数据的长方形面积及周长计算" data-scroll-to="#支持输入数据的长方形面积及周长计算"><span class="toc-tips">支持输入数据的长方形面积及周长计算</span></a></li><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#小写字母转大写字母" data-scroll-to="#小写字母转大写字母"><span class="toc-tips">小写字母转大写字母</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#小写字母转大写字母的另一种办法" data-scroll-to="#小写字母转大写字母的另一种办法"><span class="toc-tips">小写字母转大写字母的另一种办法</span></a></li></ol></li><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#计算圆的面积和周长" data-scroll-to="#计算圆的面积和周长"><span class="toc-tips">计算圆的面积和周长</span></a></li><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#闰年的判断" data-scroll-to="#闰年的判断"><span class="toc-tips">闰年的判断</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#闰年的判断-2" data-scroll-to="#闰年的判断-2"><span class="toc-tips">闰年的判断-2</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#简单的长方形周长及面积计算"  data-scroll-to="#简单的长方形周长及面积计算"><span class="toc-number">1.</span> <span class="toc-text">简单的长方形周长及面积计算</span></a></li><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#支持输入数据的长方形面积及周长计算"  data-scroll-to="#支持输入数据的长方形面积及周长计算"><span class="toc-number">2.</span> <span class="toc-text">支持输入数据的长方形面积及周长计算</span></a></li><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#小写字母转大写字母"  data-scroll-to="#小写字母转大写字母"><span class="toc-number">3.</span> <span class="toc-text">小写字母转大写字母</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#小写字母转大写字母的另一种办法"  data-scroll-to="#小写字母转大写字母的另一种办法"><span class="toc-number">3.1.</span> <span class="toc-text">小写字母转大写字母的另一种办法</span></a></li></ol></li><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#计算圆的面积和周长"  data-scroll-to="#计算圆的面积和周长"><span class="toc-number">4.</span> <span class="toc-text">计算圆的面积和周长</span></a></li><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#闰年的判断"  data-scroll-to="#闰年的判断"><span class="toc-number">5.</span> <span class="toc-text">闰年的判断</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#闰年的判断-2"  data-scroll-to="#闰年的判断-2"><span class="toc-number">5.1.</span> <span class="toc-text">闰年的判断-2</span></a></li></ol></li></ol>
 </div>
             </div>
         </div>
@@ -373,7 +371,7 @@
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="far fa-clock trm-icon"></i><br>
-            11:15
+            23:15
         </div>
     </div>
     <div class="col-sm-4">
@@ -410,7 +408,7 @@
 <div class="row">
     <div class="col-lg-12">
         <!-- title -->
-        <h5 class="trm-mb-40 trm-title-with-divider">
+        <h5 class="trm-title-with-divider">
             其他文章
             <span data-number="02"></span>
         </h5>
@@ -419,8 +417,11 @@
     
 </div>
 
+    
 
-                    <div class="trm-divider trm-mb-40"></div>
+
+
+                    <div class="trm-divider footer-divider"></div>
 
                     <!-- footer -->
                     <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
@@ -449,26 +450,10 @@
         </div>
       
 
-    
-        <div class="trm-footer-item">
-            博客已萌萌哒运行 <span id="since" class="trm-accent-color"></span> 天
-        </div>
      
 
      
 </footer>
-
-<script>
-    function show_date_time () {
-        BirthDay = new Date("04/10/2022 17:00:00");
-        today = new Date();
-        timeold = (today.getTime() - BirthDay.getTime());
-        msPerDay = 24 * 60 * 60 * 1000
-        day = Math.floor(timeold / msPerDay)
-        since.innerHTML = day
-    }
-    show_date_time()
-</script>
  
                     <!-- footer end -->
 
@@ -516,6 +501,14 @@
 
     
 
+    <!-- 数学公式 -->
+    
+
+
+    <!-- 评论插件 -->
+    
+        
+        
     
 
 
