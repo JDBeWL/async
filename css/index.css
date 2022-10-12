@@ -9,12 +9,12 @@
   opacity: 0.4;
 }
 :root {
-  --primary: #afb42b;
-  --primary-70: rgba(175, 180, 43, 0.7);
-  --primary-50: rgba(175, 180, 43, 0.5);
-  --primary-30: rgba(175, 180, 43, 0.3);
-  --primary-weak: #c0ca33;
-  --primary-weak-50: rgba(192, 202, 51, 0.5);
+  --primary: #39c5bb;
+  --primary-70: rgba(57, 197, 187, 0.7);
+  --primary-50: rgba(57, 197, 187, 0.5);
+  --primary-30: rgba(57, 197, 187, 0.3);
+  --primary-weak: #66ccff;
+  --primary-weak-50: rgba(102, 204, 255, 0.5);
   --body-color: #7B7B7D;
   --body-color-5: rgba(123, 123, 125, 0.05);
   --body-bg-color: #00151f;
@@ -32,12 +32,12 @@
   --card-border-radius: 10px;
 }
 :root.dark {
-  --primary: #afb42b;
-  --primary-70: rgba(175, 180, 43, 0.7);
-  --primary-50: rgba(175, 180, 43, 0.5);
-  --primary-30: rgba(175, 180, 43, 0.3);
-  --primary-weak: #c0ca33;
-  --primary-weak-50: rgba(192, 202, 51, 0.5);
+  --primary: #39c5bb;
+  --primary-70: rgba(57, 197, 187, 0.7);
+  --primary-50: rgba(57, 197, 187, 0.5);
+  --primary-30: rgba(57, 197, 187, 0.3);
+  --primary-weak: #66ccff;
+  --primary-weak-50: rgba(102, 204, 255, 0.5);
   --body-color: #cccdcfb3;
   --body-color-5: rgba(204, 205, 207, 0.05);
   --body-bg-color: #00151f;
