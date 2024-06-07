@@ -2480,6 +2480,7 @@ footer .footer-separator::before {
 }
 .trm-publication p {
   margin-bottom: 20px;
+  text-indent: 2em;
 }
 .trm-publication p + p {
   margin-top: -14px;
